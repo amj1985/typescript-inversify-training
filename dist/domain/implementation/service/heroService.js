@@ -1,0 +1,34 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const types_1 = require("../../constant/types");
+const inversify_1 = require("inversify");
+let HeroService = class HeroService {
+    getAllHeroes() {
+        return this._iHeroRepository.getAllHeroes();
+    }
+    getHero(id) {
+        return this._iHeroRepository.getHero(id);
+    }
+    addHero(hero) {
+        return this._iHeroRepository.addHero(hero);
+    }
+    updateHero(hero) {
+        return this._iHeroRepository.updateHero(hero);
+    }
+    deleteHero(hero) {
+        return this._iHeroRepository.deleteHero(hero);
+    }
+};
+__decorate([
+    inversify_1.inject(types_1.default.HeroRepository)
+], HeroService.prototype, "_iHeroRepository", void 0);
+HeroService = __decorate([
+    inversify_1.injectable()
+], HeroService);
+exports.HeroService = HeroService;

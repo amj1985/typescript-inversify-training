@@ -9,8 +9,6 @@ import { InversifyExpressServer } from 'inversify-express-utils';
 
 
 let containerBuilder = new ContainerBuilder();
-
-
 // start the server
 let container = containerBuilder.build();
 let server = new InversifyExpressServer(container);

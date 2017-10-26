@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
+const heroRepository_1 = require("../src/infrastructure/implementation/heroRepository");
+const chai = require("chai");
+const expect = chai.expect;
+var should = chai.should();
+describe('GET api/heroes', () => {
+    var repository;
+    beforeEach(() => {
+        repository = new heroRepository_1.HeroRepository();
+    });
+    it('should not to be undefined', () => {
+        should.exist(repository);
+    });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYWRyaS9Fc2NyaXRvcmlvL1Byb2plY3RzL215Q2x1Yi9yZXN0QVBJL3Rlc3QvaGVyb1JlcG9zaXRvcnkudGVzdC50cyIsInNvdXJjZXMiOlsiL2hvbWUvYWRyaS9Fc2NyaXRvcmlvL1Byb2plY3RzL215Q2x1Yi9yZXN0QVBJL3Rlc3QvaGVyb1JlcG9zaXRvcnkudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDRCQUEwQjtBQUMxQix3RkFBcUY7QUFFckYsNkJBQTZCO0FBRzdCLE1BQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUM7QUFDM0IsSUFBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDO0FBQzNCLFFBQVEsQ0FBQyxnQkFBZ0IsRUFBRTtJQUN2QixJQUFJLFVBQVUsQ0FBQztJQUVmLFVBQVUsQ0FBQztRQUNQLFVBQVUsR0FBRyxJQUFJLCtCQUFjLEVBQUUsQ0FBQztJQUN0QyxDQUFDLENBQUMsQ0FBQztJQUVILEVBQUUsQ0FBQyw0QkFBNEIsRUFBRTtRQUM3QixNQUFNLENBQUMsS0FBSyxDQUFDLFVBQVUsQ0FBQyxDQUFDO0lBQzdCLENBQUMsQ0FBQyxDQUFDO0FBQ1AsQ0FBQyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ3JlZmxlY3QtbWV0YWRhdGEnO1xyXG5pbXBvcnQgeyBIZXJvUmVwb3NpdG9yeSB9IGZyb20gJy4uL3NyYy9pbmZyYXN0cnVjdHVyZS9pbXBsZW1lbnRhdGlvbi9oZXJvUmVwb3NpdG9yeSc7XHJcbmltcG9ydCAqIGFzIG1vY2hhIGZyb20gJ21vY2hhJztcclxuaW1wb3J0ICogYXMgY2hhaSBmcm9tICdjaGFpJztcclxuXHJcblxyXG5jb25zdCBleHBlY3QgPSBjaGFpLmV4cGVjdDtcclxudmFyIHNob3VsZCA9IGNoYWkuc2hvdWxkKCk7XHJcbmRlc2NyaWJlKCdHRVQgYXBpL2hlcm9lcycsICgpID0+IHtcclxuICAgIHZhciByZXBvc2l0b3J5O1xyXG5cclxuICAgIGJlZm9yZUVhY2goKCkgPT4ge1xyXG4gICAgICAgIHJlcG9zaXRvcnkgPSBuZXcgSGVyb1JlcG9zaXRvcnkoKTtcclxuICAgIH0pO1xyXG5cclxuICAgIGl0KCdzaG91bGQgbm90IHRvIGJlIHVuZGVmaW5lZCcsICgpID0+IHtcclxuICAgICAgICBzaG91bGQuZXhpc3QocmVwb3NpdG9yeSk7XHJcbiAgICB9KTtcclxufSlcclxuXHJcbiJdfQ==

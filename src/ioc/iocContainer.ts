@@ -5,8 +5,8 @@ import { ConnectionOptions } from 'tls';
 import { Container } from 'inversify';
 import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
 import { HeroController } from '../restApi/controllers/heroController';
+import { HeroService } from '../domain/implementation/service/heroService';
 import { IHeroService } from '../domain/interface/service/IHeroService';
-import { HeroService } from '../domain/implementation/service/HeroService';
 import { HeroRepository } from '../infrastructure/implementation/heroRepository';
 import { IHeroRepository } from '../domain/interface/repository/IHeroRepository';
 

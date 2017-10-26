@@ -7,20 +7,20 @@ import { inject, injectable } from 'inversify';
 export class HeroService implements IHeroService {
     @inject(TYPES.HeroRepository)
     private _iHeroRepository: IHeroRepository;
-    
-    getAllHeroes(): Hero[] {
+
+    public getAllHeroes(): Hero[] {
         return this._iHeroRepository.getAllHeroes();
     }
-    getHero(id: number): Hero {
+    public getHero(id: number): Hero {
         return this._iHeroRepository.getHero(id);
     }
-    addHero(hero: Hero) {
+    public addHero(hero: Hero) {
         return this._iHeroRepository.addHero(hero);
     }
-    updateHero(hero: Hero) {
+    public updateHero(hero: Hero) {
         return this._iHeroRepository.updateHero(hero);
     }
-    deleteHero(hero: Hero) {
+    public deleteHero(hero: Hero) {
         return this._iHeroRepository.deleteHero(hero);
     }
 

@@ -6,20 +6,20 @@ const HeroesContext = require('../context/data');
 @injectable()
 export class HeroRepository implements IHeroRepository {
 
-    getAllHeroes(): Hero[] {
+    public getAllHeroes(): Hero[] {
         return HeroesContext;
     }
-    getHero(id: number): Hero {
+    public getHero(id: number): Hero {
         return HeroesContext.find(hero => hero.id == id);
     }
-    addHero(hero: Hero) {
+    public addHero(hero: Hero) {
         HeroesContext.push(hero);
     }
-    updateHero(hero: Hero) {
+    public updateHero(hero: Hero) {
         let index = HeroesContext.findIndex(item => item.id === hero.getId());
         HeroesContext.splice(index, 0, hero);
     }
-    deleteHero(hero: Hero) {
+    public deleteHero(hero: Hero) {
         let index = HeroesContext.findIndex(item => item.id === hero.getId());
         HeroesContext.splice(index, 1, hero);
     }
